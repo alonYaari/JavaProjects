@@ -1,0 +1,16 @@
+ALTER TABLE trip
+ADD has_water tinyInt(1);
+
+ALTER TABLE trip
+ADD region varchar(45);
+
+INSERT INTO `trip` (`trip_name`, `duration`, `length`, `country`, `difficulty`, `enter_cost`, `special_equipment_id`, `has_water`, `region`)
+VALUES 
+('Mount Everest Base Camp Trek', 1, 130, 'Nepal', 'Hard', 2000, NULL, true, 'north'),
+('Machu Picchu Trek', 5, 43, 'Peru', 'Moderate', 800, 1, false, 'dead_sea');
+
+select * from trip
+where duration <= 24 and has_water = 1 and region = 'north'; 
+
+* That's the first assignment and I was great. Then, you gave me an unlogical second assignment,
+ and in a combined decision (of you, Lahav and I), we decided to drop it. #coyg
